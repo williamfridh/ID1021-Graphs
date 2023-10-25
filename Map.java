@@ -7,7 +7,7 @@ public class Map {
 
     public static void main(String[] args) {
         Map m = new Map("trains.csv");
-        //m.print();
+        m.print();
     }
 
 
@@ -78,7 +78,7 @@ public class Map {
         Integer hashed = hash(name);
         if (cities[hashed] == null)
             return null;
-        while (!cities[hashed].name.equals(name))
+        while (cities[hashed] != null && !cities[hashed].name.equals(name))
             hashed++;
         return cities[hashed];
     }
@@ -88,36 +88,25 @@ public class Map {
     private City addCity(String name) {
         City c = new City(name);
         Integer hashed = hash(name);
-        System.out.println("Adding to hash: " + hashed);
-        //if (cities[hashed] != null)
-        //    System.out.print(" but collision detected");
-        //System.out.println(c + " --- " + c.name + " hash: " + hashed + " currently holds " + cities[hashed]);
-        //System.out.print(" current hashed: " + hashed);
-        //while (cities[hashed] != null)
-        //    hashed++;
-        //    System.out.println("New hash val: " + cities[hashed++]);
-        //System.out.println(hashed + " : " + cities[hashed]);
-        //System.out.print(" new hashed: " + hashed + "\n");
+        while (cities[hashed] != null)
+            hashed++;
         cities[hashed] = c;
-        System.out.println(c.name + " added");
         return c;
     }
 
 
 
     private void addConnection (String from, String to, int di) {
-        System.out.println("#Adding: " + from + " to " + to + " (" + di + ")");
         City fromCity = lookup(from);
-        //City toCity = lookup(to);
+        City toCity = lookup(to);
 
         if (fromCity == null)
             fromCity = addCity(from);
 
-/* 
         if (toCity == null)
-            toCity = addCity(toCity);
+            toCity = addCity(to);
 
-        fromCity.addConnection(toCity, di);*/
+        fromCity.addConnection(toCity, di);
     }
 
 
@@ -127,9 +116,9 @@ public class Map {
             if (c == null)
                 continue;
             System.out.println(c.name + " (" + c.connections.length + ")");
-            /*for (City.Connection con : c.connections)
+            for (City.Connection con : c.connections)
                 System.out.println("└──> " + con.destination.name + " (" + con.distance + " min)");
-            System.out.println();*/
+            System.out.println();
         }
     }
 }
