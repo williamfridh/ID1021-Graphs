@@ -1,0 +1,173 @@
+
+Max SIZE = 100
+Benchmarking Malmö to Göteborg
+shortest: null min (0 ms)
+
+Benchmarking Göteborg to Stockholm
+shortest: null min (0 ms)
+
+Benchmarking Malmö to Stockholm
+shortest: null min (0 ms)
+
+Benchmarking Stockholm to Sundsvall
+shortest: null min (0 ms)
+
+Benchmarking Stockholm to Umeå
+shortest: null min (0 ms)
+
+Benchmarking Göteborg to Sundsvall
+shortest: null min (0 ms)
+
+Benchmarking Sundsvall to Umeå
+shortest: null min (0 ms)
+
+Benchmarking Umeå to Göteborg
+shortest: null min (0 ms)
+
+Benchmarking Göteborg to Umeå
+shortest: null min (0 ms)
+
+
+Max SIZE = 200
+Benchmarking Malmö to Göteborg
+shortest: 153 min (0 ms)
+
+Benchmarking Göteborg to Stockholm
+shortest: null min (0 ms)
+
+Benchmarking Malmö to Stockholm
+shortest: null min (0 ms)
+
+Benchmarking Stockholm to Sundsvall
+shortest: null min (0 ms)
+
+Benchmarking Stockholm to Umeå
+shortest: null min (0 ms)
+
+Benchmarking Göteborg to Sundsvall
+shortest: null min (0 ms)
+
+Benchmarking Sundsvall to Umeå
+shortest: 190 min (0 ms)
+
+Benchmarking Umeå to Göteborg
+shortest: null min (0 ms)
+
+Benchmarking Göteborg to Umeå
+shortest: null min (0 ms)
+
+
+Max SIZE = 300
+Benchmarking Malmö to Göteborg
+shortest: 153 min (1 ms)
+
+Benchmarking Göteborg to Stockholm
+shortest: 211 min (1 ms)
+
+Benchmarking Malmö to Stockholm
+shortest: 273 min (1 ms)
+
+Benchmarking Stockholm to Sundsvall
+shortest: null min (0 ms)
+
+Benchmarking Stockholm to Umeå
+shortest: null min (0 ms)
+
+Benchmarking Göteborg to Sundsvall
+shortest: null min (0 ms)
+
+Benchmarking Sundsvall to Umeå
+shortest: 190 min (0 ms)
+
+Benchmarking Umeå to Göteborg
+shortest: null min (0 ms)
+
+Benchmarking Göteborg to Umeå
+shortest: null min (0 ms)
+
+
+Max SIZE = 400
+Benchmarking Malmö to Göteborg
+shortest: 153 min (30 ms)
+
+Benchmarking Göteborg to Stockholm
+shortest: 211 min (28 ms)
+
+Benchmarking Malmö to Stockholm
+shortest: 273 min (30 ms)
+
+Benchmarking Stockholm to Sundsvall
+shortest: 327 min (19 ms)
+
+Benchmarking Stockholm to Umeå
+shortest: null min (19 ms)
+
+Benchmarking Göteborg to Sundsvall
+shortest: null min (27 ms)
+
+Benchmarking Sundsvall to Umeå
+shortest: 190 min (0 ms)
+
+Benchmarking Umeå to Göteborg
+shortest: null min (0 ms)
+
+Benchmarking Göteborg to Umeå
+shortest: null min (28 ms)
+
+
+Max SIZE = 500
+Benchmarking Malmö to Göteborg
+shortest: 153 min (1180 ms)
+
+Benchmarking Göteborg to Stockholm
+shortest: 211 min (1286 ms)
+
+Benchmarking Malmö to Stockholm
+shortest: 273 min (1204 ms)
+
+Benchmarking Stockholm to Sundsvall
+shortest: 327 min (869 ms)
+
+Benchmarking Stockholm to Umeå
+shortest: null min (862 ms)
+
+Benchmarking Göteborg to Sundsvall
+shortest: null min (1329 ms)
+
+Benchmarking Sundsvall to Umeå
+shortest: 190 min (0 ms)
+
+Benchmarking Umeå to Göteborg
+shortest: null min (0 ms)
+
+Benchmarking Göteborg to Umeå
+shortest: null min (1303 ms)
+
+
+Max SIZE = 600
+Benchmarking Malmö to Göteborg
+shortest: 153 min (44445 ms)
+
+Benchmarking Göteborg to Stockholm
+        shortest: 211 min (59385 ms)
+
+Benchmarking Malmö to Stockholm
+shortest: 273 min (46949 ms)
+
+Benchmarking Stockholm to Sundsvall
+shortest: 327 min (39278 ms)
+
+Benchmarking Stockholm to Umeå
+shortest: 517 min (39204 ms)
+
+Benchmarking Göteborg to Sundsvall
+shortest: 515 min (62054 ms)
+
+Benchmarking Sundsvall to Umeå
+shortest: 190 min (1 ms)
+
+Benchmarking Umeå to Göteborg
+shortest: null min (0 ms)
+
+Benchmarking Göteborg to Umeå
+shortest: null min (60922 ms)

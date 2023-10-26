@@ -5,10 +5,10 @@ import java.io.FileReader;
 
 public class Map {
 
-    public static void main(String[] args) {
+    /* public static void main(String[] args) {
         Map m = new Map("trains.csv");
         m.print();
-    }
+    } */
 
 
 
@@ -30,7 +30,7 @@ public class Map {
 
 
 
-    private class City {
+    class City {
 
         String name;
         Connection[] connections;
@@ -49,7 +49,7 @@ public class Map {
             connections = newConnections;
         }
 
-        private class Connection {
+        class Connection {
 
             City destination;   // Made for navigating the graph.
             int distance;       // In minutes.
@@ -74,7 +74,7 @@ public class Map {
 
 
 
-    private City lookup (String name) {
+    City lookup (String name) {
         Integer hashed = hash(name);
         if (cities[hashed] == null)
             return null;
@@ -107,6 +107,7 @@ public class Map {
             toCity = addCity(to);
 
         fromCity.addConnection(toCity, di);
+        toCity.addConnection(fromCity, di);
     }
 
 
