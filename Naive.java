@@ -1,14 +1,14 @@
 public class Naive {
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         Map map = new Map("trains.csv");
         //map.print();
         //String from = args[0];
         //String to = args[1];
         //Integer max = Integer.valueOf(args[2]);
         String[][] data = {
-            {"Malmö", "Kiruna"},
+            {"Malmö", "Göteborg"},
         };
-
+/* 
         System.out.println("\nMax SIZE = 100");
         for (String[] a : data)
             benchmark(map.lookup(a[0]), map.lookup(a[1]), 100);
@@ -16,11 +16,11 @@ public class Naive {
         System.out.println("\nMax SIZE = 200");
         for (String[] a : data)
             benchmark(map.lookup(a[0]), map.lookup(a[1]), 200);
-
+*/
         System.out.println("\nMax SIZE = 300");
         for (String[] a : data)
             benchmark(map.lookup(a[0]), map.lookup(a[1]), 300);
-
+/* 
         System.out.println("\nMax SIZE = 400");
         for (String[] a : data)
             benchmark(map.lookup(a[0]), map.lookup(a[1]), 400);
@@ -31,8 +31,8 @@ public class Naive {
 
         System.out.println("\nMax SIZE = 600");
         for (String[] a : data)
-            benchmark(map.lookup(a[0]), map.lookup(a[1]), 600);
-    }*/
+            benchmark(map.lookup(a[0]), map.lookup(a[1]), 600);*/
+    }
 
 
 

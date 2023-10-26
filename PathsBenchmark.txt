@@ -1,0 +1,26 @@
+Benchmarking Malmö to Göteborg
+shortest: 153 min (209 ms)
+
+Benchmarking Göteborg to Stockholm
+shortest: 211 min (82 ms)
+
+Benchmarking Malmö to Stockholm
+shortest: 273 min (163 ms)
+
+Benchmarking Stockholm to Sundsvall
+shortest: 327 min (119 ms)
+
+Benchmarking Stockholm to Umeå
+shortest: 517 min (182 ms)
+
+Benchmarking Göteborg to Sundsvall
+shortest: 515 min (149 ms)
+
+Benchmarking Sundsvall to Umeå
+shortest: 190 min (426 ms)
+
+Benchmarking Umeå to Göteborg
+shortest: 705 min (156 ms)
+
+Benchmarking Göteborg to Umeå
+shortest: 705 min (220 ms)

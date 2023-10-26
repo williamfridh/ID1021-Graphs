@@ -1,3 +1,5 @@
+import java.sql.Connection;
+
 class Paths {
 
     public static void main(String[] args) {
@@ -28,7 +30,8 @@ class Paths {
         Integer dist = shortest(from, to);
         long time = (System.nanoTime() - t0)/1_000_000;
 
-        System.out.println("shortest: " + dist + " min (" + time + " ms)\n");
+        System.out.println("shortest: " + dist + " min (" + time + " ms)");
+        System.out.println();
     }
 
 
@@ -55,44 +58,30 @@ class Paths {
 
 
     private Integer shortest(Map.City from, Map.City to) {
-        //System.out.println("FROM: " + from.name + " TO: " + to.name + " MAX: " + max);
 
-        for (Map.City c : path)
-            if (c == from)
-                return null;
-
-        path[sp++] = from;
-        //System.out.println("ADDED: " + path[sp - 1].name);
-        print();
-            
-        if (from == to) // Searched for found.
+        if (from == to)
             return 0;
 
+        path[sp++] = from;
+        
         Integer shrt = null;
-        for (int i = 0; i < from.connections.length; i++) {
+        outerloop:
+        for (Map.City.Connection conn : from.connections) {
 
-            Map.City.Connection conn = from.connections[i];
+            for (Map.City c : path)
+                if (c == conn.destination)
+                    continue outerloop;
 
-            /*for (Map.City c : path)
-                if (conn.destination.name.equals(c.name))
-                    continue;*/
-
-            Integer t = shortest(conn.destination, to);
-
-            if (t == null) { // Bad route.
-                System.out.println("SP: " + sp);
+            if (conn == null)
                 continue;
-            }
+
+            Integer dist = shortest(conn.destination, to);
             
-            Integer new_shrt = conn.distance;
-            if (t != 0)
-                new_shrt += t;
-
-            if (shrt == null || shrt.compareTo(new_shrt) > 0)
-                shrt = new_shrt;
-
+            if (dist != null && (shrt == null || shrt > dist + conn.distance))
+                shrt = dist + conn.distance;
         }
-        sp--;
+
+        path[sp--] = null;
         return shrt;
     }
 }
