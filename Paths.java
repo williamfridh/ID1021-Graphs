@@ -1,5 +1,3 @@
-import java.sql.Connection;
-
 class Paths {
 
     public static void main(String[] args) {
@@ -71,9 +69,6 @@ class Paths {
             for (Map.City c : path)
                 if (c == conn.destination)
                     continue outerloop;
-
-            if (conn == null)
-                continue;
 
             Integer dist = shortest(conn.destination, to);
             
