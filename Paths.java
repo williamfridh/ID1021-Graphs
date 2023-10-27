@@ -5,15 +5,7 @@ class Paths {
         Map map = new Map("trains.csv");
 
         String[][] data = {
-            {"Malmö", "Göteborg"},
-            {"Göteborg", "Stockholm"},
-            {"Malmö", "Stockholm"},
-            {"Stockholm", "Sundsvall"},
-            {"Stockholm", "Umeå"},
-            {"Göteborg", "Sundsvall"},
-            {"Sundsvall", "Umeå"},
-            {"Umeå", "Göteborg"},
-            {"Göteborg", "Umeå"},
+            {"Malmö", "Kiruna"},
         };
 
         for (String[] a : data)

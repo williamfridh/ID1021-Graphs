@@ -6,7 +6,7 @@ public class Naive {
         //String to = args[1];
         //Integer max = Integer.valueOf(args[2]);
         String[][] data = {
-            {"Malmö", "Göteborg"},
+            {"Umeå", "Göteborg"},
         };
 /* 
         System.out.println("\nMax SIZE = 100");
@@ -17,9 +17,9 @@ public class Naive {
         for (String[] a : data)
             benchmark(map.lookup(a[0]), map.lookup(a[1]), 200);
 */
-        System.out.println("\nMax SIZE = 300");
+        System.out.println("\nMax SIZE = 800");
         for (String[] a : data)
-            benchmark(map.lookup(a[0]), map.lookup(a[1]), 300);
+            benchmark(map.lookup(a[0]), map.lookup(a[1]), 800);
 /* 
         System.out.println("\nMax SIZE = 400");
         for (String[] a : data)
@@ -48,7 +48,7 @@ public class Naive {
 
 
     private static Integer shortest(Map.City from, Map.City to, Integer max) {
-        //System.out.println("FROM: " + from.name + " TO: " + to.name + " MAX: " + max);
+        
         if (max < 0)
             return null;
             
@@ -56,9 +56,8 @@ public class Naive {
             return 0;
 
         Integer shrt = null;
-        for (int i = 0; i < from.connections.length; i++) {
+        for (Map.City.Connection conn : from.connections) {
 
-            Map.City.Connection conn = from.connections[i];
             Integer t = shortest(conn.destination, to, max - conn.distance);
 
             if (t == null) // Bad route.
